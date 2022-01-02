@@ -1,4 +1,9 @@
-# Creating a new Node App
+# Using this Repository
+Clone this repository, add MONGO_URI in .env file, run npm install (to install all packages) & npm start and open the following URLs for Demo</b></p>
+#### http://localhost:3000/home
+#### http://localhost:3000/api/create-and-save-person">http://localhost:3000/api/create-and-save-person
+
+# Creating a new NodeJS App
 ## Installing Node.js
 ### What is Node?
 Node / Node.js is an open-source, cross-platform runtime environment that allows developers to create server-side applications in JavaScript. 
