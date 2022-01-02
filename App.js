@@ -2,8 +2,7 @@ var express = require('express');
 var app = express();
 require('dotenv').config();
 const mongoose = require('mongoose');
-//var bodyParser = require("body-parser");
-//app.use(bodyParser.urlencoded({ extended: false }));
+
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const Schema = mongoose.Schema;
 
@@ -14,9 +13,8 @@ const personSchema = new Schema({
   favoriteFoods: [String]
 });
 
-Person = mongoose.model("Person", personSchema);
-
-
+Person = mongoose.model("Person", personSchema , 'personlist');  //personlist is the name of the collection in MongoDB - its optional 
+												//if you dont specify, it will be inferred from model name by Mongoose
 
 const createAndSavePerson = (done) => {
  var nia = new Person({name: "nia arora", age: 84, favoriteFoods: ["eggs", "fish", "fresh fruit"]});
@@ -120,7 +118,7 @@ exports.findPeopleByName = findPeopleByName;
 exports.findOneByFood = findOneByFood;
 exports.findPersonById = findPersonById;
 exports.findEditThenSave = findEditThenSave;
- exports.findAndUpdate = findAndUpdate;
+exports.findAndUpdate = findAndUpdate;
 exports.createManyPeople = createManyPeople;
 exports.removeById = removeById;
 exports.removeManyPeople = removeManyPeople;

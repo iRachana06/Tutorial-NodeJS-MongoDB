@@ -1,0 +1,75 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+ <body>
+ <div class="center">
+  <h1 align="center">Tutorial on Creating a Node App with MongDB for storing Data</h1>
+  <h3>
+  <table border ="0" align="center" height=50px>
+  <tr>
+  <p><h4>Clone this repository, add MONGO_URI in .env file, run npm start and click the Following URLs for Demo</h4></p>
+  
+   <td align= "center">Home Page </td> <td align= "center"> <a href="http://localhost:3000/home">http://localhost:3000/home</a> </td>
+   </tr>
+   <tr> 
+   <td align= "center"> API to Add Record to Database </td > <td align= "center"><a href ="http://localhost:3000/api/create-and-save-person">http://localhost:3000/api/create-and-save-person</a> </td>
+   </h3>
+   </table>
+   <h2>Creating a new Node App</h2>
+   <h3>What is Node?</h3>
+   <p>
+   Node / Node.js is an open-source, cross-platform runtime environment that allows developers to create server-side applications in JavaScript. 
+The node package manager (NPM) provides access to hundreds of thousands of reusable packages.
+
+To start building your Node.js applications, the first step is to install node.js framework. For different OS, differnt pre-built installer for your platform are available.<br> 
+Link to download npm package- <a href="https://nodejs.org/en/download/ "> https://nodejs.org/en/download/ </a> </p>
+<h3>Web Frameworks- Express</h3>
+   <p>
+   Express is the most popular Node web framework. It helps in handling different HTTP methods - GET, POST, DELETE, etc., separately handle requests recieved at different URL paths or routes by Routing, serve static files, or use templates to dynamically create the response.
+   </p>
+   <h3> Creating an App </h3>
+<h3>Step 1 : Install Express Package </h3>
+<p>
+Express package enables your application to handle different incoming requests to the application. For installing a new package use the npm install command. This command will update package.json file by adding the newly installed package to the list of dependencies. <br/>
+npm install package-name<br>
+npm install express<br>
+</p>
+<h3>Step 2 : Create a new file server.js</h3>
+<p>
+This will be an entry point of your application. The routes will be added in this file. It will invoke the methods created in App.js file, that implement different business functionalities.
+</p>
+<h3>Step 3: Configure MongoDB Atlas </h3>
+<p>
+MongoDB Atlas provides an easy way to host and manage your data in the cloud.<br/> <a href="https://account.mongodb.com/account/login">Click here</a> to create a database on MongoDB Atlas
+Steps for connecting to a Collection in MongoDB Atlas : <br/>
+<ul>
+* Create an Atlas Account.<br/>
+* Deploy a Free Cluster.<br/>
+* Add Your Connection IP Address to Your IP Access List.<br/>
+* Create a Database User for Your Cluster.<br/>
+* Connect to Your Cluster. <br/>
+</ul>
+<a href="">Click here</a> for complete explanation on the above steps.
+</p>
+<h3>
+Step 4: Adding mongodb and mongoose in the application </h3> 
+<p>
+To work with Mongodb we need to install 2 packages: <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; npm install mongodb <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; npm install mongoose <br/>
+Create a .env file in your Root directory and add a variable MONGO_URI="connection string of the MongoDB Atlas"  <br/>
+To import this variable in your App.js file(explained below), add the following statement: <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require('dotenv').config(); <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const mongoose = require('mongoose'); <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }); <br/>
+Using the mongoose object, you can create a Schema for your collection. Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
+<br/>
+</p>
+<p>
+<h3>Step 5 : Create an App.js file </h3>
+You can write the methods that implement different functionalities like connecting to database, storing fetching data from the database etc. The methods in this file will be invoked from the server.js which will be acting as the server running on port 3000. 
+</p>
+</div>
+ </body>
+</html>

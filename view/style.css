@@ -1,0 +1,23 @@
+body {
+  background-color: white;
+  align:center;
+  line-height: 1.6;
+  
+}
+.center {
+  margin: auto;
+  width: 70%;
+  background-color: powderblue;
+  padding: 10px;
+}
+h1 {
+  color: #2216a1;
+align:center;
+}
+p {
+  color: black;
+  margin: 10px;
+}
+h2{
+color: #171157;
+}
