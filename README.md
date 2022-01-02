@@ -18,8 +18,8 @@ Express is the most popular Node web framework. It helps in handling different H
 ## Creating NodeJS App
 ### Step 1 : Install Express Package 
 Express package enables your application to handle different incoming requests to the application. For installing a new package use the npm install command. This command will update package.json file by adding the newly installed package to the list of dependencies.
-### `npm install <package-name>`
-### `npm install express`
+     ### `npm install <package-name>`
+     ### `npm install express`
 
 ### Step 2 : Create a new file server.js
 This will be an entry point of your application. The routes will be added in this file. It will invoke the methods created in App.js file, that implement different business functionalities.
@@ -35,8 +35,8 @@ Steps for connecting to a Collection in MongoDB Atlas :
 
 ## Step 4: Adding mongodb and mongoose in the application
 To work with Mongodb we need to install 2 packages:
-### `npm install mongodb`
-### `npm install mongoose`
+    ### `npm install mongodb`
+    ### `npm install mongoose`
 Create a .env file in your Root directory and add a variable MONGO_URI="<connection string of the MongoDB Atlas>"
 To import this variable in your App.js file(explained below), add the following statement:### `require('dotenv').config();`
 `const mongoose = require('mongoose');`
