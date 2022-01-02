@@ -15,7 +15,7 @@ Link to download npm package- https://nodejs.org/en/download/
 ### Web Frameworks- Express
 Express is the most popular Node web framework. It helps in handling different HTTP methods - GET, POST, DELETE, etc., separately handle requests recieved at different URL paths or routes by Routing, serve static files, or use templates to dynamically create the response.
 
-## Creating an App
+## Creating NodeJS App
 ### Step 1 : Install Express Package 
 Express package enables your application to handle different incoming requests to the application. For installing a new package use the npm install command. This command will update package.json file by adding the newly installed package to the list of dependencies.
 ### `npm install <package-name>`
