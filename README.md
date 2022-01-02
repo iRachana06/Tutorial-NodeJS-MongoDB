@@ -18,8 +18,8 @@ Express is the most popular Node web framework. It helps in handling different H
 ## Creating NodeJS App
 ### Step 1 : Install Express Package 
 Express package enables your application to handle different incoming requests to the application. For installing a new package use the npm install command. This command will update package.json file by adding the newly installed package to the list of dependencies.
-     ### `npm install <package-name>`
-     ### `npm install express`
+    ### `npm install <package-name>`
+    ### `npm install express`
 
 ### Step 2 : Create a new file server.js
 This will be an entry point of your application. The routes will be added in this file. It will invoke the methods created in App.js file, that implement different business functionalities.
