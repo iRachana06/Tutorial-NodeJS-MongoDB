@@ -1,5 +1,5 @@
 # Using this Repository
-Clone this repository, add MONGO_URI in .env file, run npm install (to install all packages) & npm start and open the following URLs for Demo</b></p>
+Clone this repository, add MONGO_URI(here connection string from the Mongodb Atlas) in .env file, run npm install (to install all packages) & npm start and open the following URLs for Demo</b></p>
 #### http://localhost:3000/home
 #### http://localhost:3000/api/create-and-save-person">http://localhost:3000/api/create-and-save-person
 
@@ -18,8 +18,8 @@ Express is the most popular Node web framework. It helps in handling different H
 ## Creating NodeJS App
 ### Step 1 : Install Express Package 
 Express package enables your application to handle different incoming requests to the application. For installing a new package use the npm install command. This command will update package.json file by adding the newly installed package to the list of dependencies.
-    ### `npm install <package-name>`
-    ### `npm install express`
+###`npm install <package-name>`
+###`npm install express`
 
 ### Step 2 : Create a new file server.js
 This will be an entry point of your application. The routes will be added in this file. It will invoke the methods created in App.js file, that implement different business functionalities.
@@ -35,12 +35,13 @@ Steps for connecting to a Collection in MongoDB Atlas :
 
 ## Step 4: Adding mongodb and mongoose in the application
 To work with Mongodb we need to install 2 packages:
-    ### `npm install mongodb`
-    ### `npm install mongoose`
+###`npm install mongodb`
+###`npm install mongoose`
 Create a .env file in your Root directory and add a variable MONGO_URI="<connection string of the MongoDB Atlas>"
-To import this variable in your App.js file(explained below), add the following statement:### `require('dotenv').config();`
-`const mongoose = require('mongoose');`
-`mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });`
+To import this variable in your App.js file(explained below), add the following statement:
+###`require('dotenv').config();`
+###`const mongoose = require('mongoose');`
+###`mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });`
 Using the mongoose object, you can create a Schema for your collection. Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
 ## Step 5 : Create an App.js file 
 You can write the methods that implement different functionalities like connecting to database, storing fetching data from the database etc. The methods in this file will be invoked from the server.js which will be acting as the server running on port 3000. 
@@ -49,7 +50,7 @@ You can write the methods that implement different functionalities like connecti
 
 In the project directory, you can run:
 
-### `npm start`
+###`npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
