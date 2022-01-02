@@ -17,6 +17,7 @@ const TIMEOUT = 10000;
 app.use(bodyParser.urlencoded({ extended: "false" }));
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, '/view')));
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/view/homepage.html");
 });
