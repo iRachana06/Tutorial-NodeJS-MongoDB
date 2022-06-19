@@ -1,3 +1,5 @@
+# About
+This application allows you to create a list of persons, store data in mongodb and perform all CRUD operations
 # Using this Repository
 Clone this repository, add MONGO_URI(here connection string from the Mongodb Atlas) in .env file, run npm install (to install all packages) & npm start and open the following URLs for Demo</b></p>
 #### http://localhost:3000/home
